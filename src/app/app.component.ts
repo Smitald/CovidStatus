@@ -12,7 +12,7 @@ export class AppComponent {
   country:any
   Confirmed:Number
   Recovered:Number
-  Deaths:Number
+  Cases:Number
   Date:Date
   Active:Number
   Country:String
@@ -30,7 +30,6 @@ export class AppComponent {
     this.countries = data
     })
 
-    // this.getworldtotal()
   }
   getCoronaData(){
     this.corona.getCoronaRealData(this.country).subscribe((data)=>{
@@ -39,7 +38,7 @@ export class AppComponent {
       var index = data.length - 1
       this.Confirmed = data[index].Confirmed
       this.Recovered = data[index].Recovered
-      this.Deaths = data[index].Deaths
+      this.Cases = data[index].Cases
       this.Date = data[index].Date
       this.Active = data[index].Active
       this.Country = data[index].Country
