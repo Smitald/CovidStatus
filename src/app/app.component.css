@@ -1,0 +1,11 @@
+.title{
+    text-align: center;
+    font-size:30px;
+}
+table{
+    border:1px;
+    padding:4px;
+}
+label{
+    font-size: 20px;
+}

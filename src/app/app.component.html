@@ -1,20 +1,18 @@
 <div>
   <div >  
-    <h4>Coronavirus (COVID-19)  Status </h4>  
+    <h2 class="title">Covid-19 Countrywise Status </h2>  
 </div> 
-<br>
 
-<br>
-  <label>Country Name:</label>&nbsp;&nbsp;
+  <label>Country Name: </label>
   <select (change)="getCountry($event)">
     
     <option *ngFor="let country of countries" value={{country.Slug}}>
     {{country.Country}}
     </option>
-  </select> &nbsp;&nbsp;
+  </select> 
   <button (click)="getCoronaData()" class="button button4">Seach Corona Data</button>
   
-  <table align="center" border="1" cellpadding="4" cellspacing="4">  
+  <table >  
     <tr>  
         <th>Country</th>
         <th>Confirmed</th>  
