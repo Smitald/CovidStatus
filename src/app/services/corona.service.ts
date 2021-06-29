@@ -19,9 +19,6 @@ export class CoronaService {
        return this.http.get<any>(url)
   }
 
-//   getTotal():Observable<any>{
-//     const url = "https://api.covid19api.com/world/total"
-//     return this.http.get<any>(url)
-// }
+
 
 }
