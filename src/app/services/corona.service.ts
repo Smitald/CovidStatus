@@ -14,11 +14,13 @@ export class CoronaService {
       return this.http.get<any>(url)
   }
 
-    getCoronaRealData(country:any):Observable<any>{
-       const url = "https://api.covid19api.com/total/country/"+ country
-       return this.http.get<any>(url)
-  }
-
-
+  //   getCoronaRealData(country:any):Observable<any>{
+  //      const url = "https://api.covid19api.com/total/country/"+ country
+  //      return this.http.get<any>(url)
+  // }
+  getCountryByData(country:any):Observable<any>{
+    const url = "https://api.covid19api.com/country/" + country +"/status/confirmed?from=2020-03-01T00:00:00Z&to=2020-04-01T00:00:00Z"
+    return this.http.get<any>(url)
+}
 
 }
