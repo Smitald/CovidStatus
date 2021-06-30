@@ -10,15 +10,11 @@ export class AppComponent {
 
   countries:any
   country:any
-  Confirmed:Number
-  Recovered:Number
+  Status:Number
   Cases:Number
   Date:Date
-  Active:Number
   Country:String
-  TotalConfirmed:Number
-  TotalDeaths:Number
-  TotalRecovered:Number
+
 
 
   constructor(private corona:CoronaService){}
@@ -32,18 +28,16 @@ export class AppComponent {
 
   }
   getCoronaData(){
-    this.corona.getCoronaRealData(this.country).subscribe((data)=>{
-      console.log(data)
-
+    this.corona.getCountryByData(this.country).subscribe((data)=>{
+    
       var index = data.length - 1
-      this.Confirmed = data[index].Confirmed
-      this.Recovered = data[index].Recovered
+      this.Status = data[index].Status
       this.Cases = data[index].Cases
       this.Date = data[index].Date
-      this.Active = data[index].Active
       this.Country = data[index].Country
     })
   }
+  
 
   getCountry(event:any){
     this.country = (<HTMLInputElement>event.target).value
